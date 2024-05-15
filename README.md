@@ -6,7 +6,7 @@ Tools to export, convert, and train the RetinaFace face detection model for use 
 
 The production implementation uses the torch weights provided in the [forked repo](https://github.com/biubug6/Pytorch_Retinaface). Those weights are converted to from torch to ONNX, then ONNX to RKNN whereby the RKNN models are exported in both floating point (`fp`) and quantized (`i8`) formats. All intermediate and final RKNN models converted by the processes described herein can be found in Google Cloud Storage (GCS) [`gs://ld-models/RetinaFace`](https://console.cloud.google.com/storage/browser/ld-models/RetinaFace). The full conversion process is reproduced here for completeness.
 
-Note that the ONNX to RKNN conversion script is adapted from [https://github.com/airockchip/rknn_model_zoo/blob/main/examples/RetinaFace/python/convert.py](https://github.com/airockchip/rknn_model_zoo/blob/main/examples/RetinaFace/python/convert.py).
+Note that the ONNX to RKNN conversion script, `convert_to_rknn.py`, is adapted from [https://github.com/airockchip/rknn_model_zoo/blob/main/examples/RetinaFace/python/convert.py](https://github.com/airockchip/rknn_model_zoo/blob/main/examples/RetinaFace/python/convert.py).
 
 ## Install
 
@@ -19,7 +19,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 ## Download
-For pretrained weights from the [forked repo](https://github.com/biubug6/Pytorch_Retinaface) are available in GCS.
+Pretrained weights from the [forked repo](https://github.com/biubug6/Pytorch_Retinaface) are available in GCS.
 
 ```bash
 ./download_weights.sh
