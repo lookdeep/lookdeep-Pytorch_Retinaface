@@ -27,7 +27,7 @@ For pretrained weights from the [forked repo](https://github.com/biubug6/Pytorch
 
 ## Export
 
-## `.pth` to `.onnx`
+### `.pth` to `.onnx`
 
 ```
 python convert_to_onnx.py -m weights/Resnet50_Final.pth --network resnet50 --long_side 320
@@ -36,7 +36,7 @@ python convert_to_onnx.py -m weights/mobilenet0.25_Final.pth --network mobile0.2
 python convert_to_onnx.py -m weights/mobilenet0.25_Final.pth--network mobile0.25 --long_side 640
 ```
 
-## `.onnx` to `.rknn`
+### `.onnx` to `.rknn`
 
 
 **Note**: If converting from a newly trained model, ensure specification of `--mlflow-run-id` and `--mlflow-run-name`.
