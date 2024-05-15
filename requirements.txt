@@ -1,0 +1,6 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+onnx==1.14.1
+opencv-python==4.9.0.80
+torch==2.1.0+cpu 
+torchvision==0.16.0+cpu 
+https://github.com/airockchip/rknn-toolkit2/raw/master/rknn-toolkit2/packages/rknn_toolkit2-2.0.0b0+9bab5682-cp310-cp310-linux_x86_64.whl
